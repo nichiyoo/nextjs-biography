@@ -15,6 +15,8 @@ const rubik = Rubik({
 	variable: '--font-rubik',
 });
 
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const metadata: Metadata = {
 	title: 'Dra. Siti Fatimah',
 	description:
@@ -23,10 +25,10 @@ export const metadata: Metadata = {
 		title: 'Dra. Siti Fatimah',
 		description:
 			'Dra. Siti Fatimah adalah pemimpin berdedikasi di bidang pelayanan publik dan pengembangan masyarakat.',
-		url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+		url: `${BASE_URL}`,
 		images: [
 			{
-				url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/dra-siti-fatimah.png`,
+				url: `${BASE_URL}/images/dra-siti-fatimah.png`,
 				width: 1200,
 				height: 630,
 				alt: 'Dra. Siti Fatimah',
