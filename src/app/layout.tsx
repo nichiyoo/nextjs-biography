@@ -23,10 +23,10 @@ export const metadata: Metadata = {
 		title: 'Dra. Siti Fatimah',
 		description:
 			'Dra. Siti Fatimah adalah pemimpin berdedikasi di bidang pelayanan publik dan pengembangan masyarakat.',
-		url: 'https://siti-fatimah.com',
+		url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
 		images: [
 			{
-				url: 'https://siti-fatimah.com/images/dra-siti-fatimah.png',
+				url: `${process.env.NEXT_PUBLIC_BASE_URL}/images/dra-siti-fatimah.png`,
 				width: 1200,
 				height: 630,
 				alt: 'Dra. Siti Fatimah',
