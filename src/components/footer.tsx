@@ -17,8 +17,8 @@ const Footer: React.FC<FooterProps> = ({ ...props }) => {
 					<div className='md:col-span-2'>
 						<h4 className='mb-2 text-2xl'>Siti Fatimah</h4>
 						<p className='text-white/60'>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi neque dolores, expedita
-							harum voluptates reprehenderit tenetur! Quo, voluptatem repellat? Quas!
+							Dra. Hj. Siti Fatimah adalah pemimpin berdedikasi di bidang pelayanan publik dan
+							pengembangan masyarakat.
 						</p>
 					</div>
 
