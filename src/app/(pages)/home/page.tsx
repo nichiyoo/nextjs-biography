@@ -31,8 +31,8 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 							<Link href='/biografi'>
 								<Button variant='primary'>Biografi</Button>
 							</Link>
-							<Link href='/pendidikan'>
-								<Button variant='secondary'>Pendidikan</Button>
+							<Link href='/peternakan'>
+								<Button variant='secondary'>Peternakan</Button>
 							</Link>
 						</div>
 					</div>
