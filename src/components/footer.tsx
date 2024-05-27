@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Link from 'next/link';
-import { footer } from '@/libs/constant';
+import { navigations } from '@/libs/constant';
 
 interface FooterProps {
 	//
@@ -17,19 +17,19 @@ const Footer: React.FC<FooterProps> = ({ ...props }) => {
 					<div className='md:col-span-2'>
 						<h4 className='mb-2 text-2xl'>Siti Fatimah</h4>
 						<p className='text-white/60'>
-							Dra. Hj. Siti Fatimah adalah pemimpin berdedikasi di bidang pelayanan publik dan
-							pengembangan masyarakat.
+							Dra. Hj. Siti Fatimah adalah ASN berdedikasi di bidang pelayanan publik dan pengembangan
+							masyarakat.
 						</p>
 					</div>
 
-					{footer.map((nav) => (
-						<div key={nav.name}>
-							<h5 className='mb-2 text-lg'>{nav.name}</h5>
+					{navigations.map((navigation) => (
+						<div key={navigation.name}>
+							<h5 className='mb-2 text-lg'>{navigation.name}</h5>
 							<ul className='flex flex-col space-y-2'>
-								{nav.links.map((link) => (
-									<li key={link.name}>
-										<Link href={link.href}>
-											<span className='text-white/60 text-end'>{link.name}</span>
+								{navigation.menus.map((menu) => (
+									<li key={menu.name}>
+										<Link href={menu.href}>
+											<span className='text-white/60 text-end'>{menu.name}</span>
 										</Link>
 									</li>
 								))}

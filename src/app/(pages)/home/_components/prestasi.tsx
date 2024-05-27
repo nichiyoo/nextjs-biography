@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Star } from 'lucide-react';
-import { prestasi } from '@/libs/constant';
+import { achievements } from '@/libs/constant';
 
 interface PrestasiProps {
 	className?: string;
@@ -16,9 +16,9 @@ const Prestasi: React.FC<PrestasiProps> = ({ ...props }) => {
 			</div>
 
 			<ul className='flex flex-col space-y-6'>
-				{prestasi.map((prestasi) => (
-					<div className='flex items-start justify-between' key={prestasi}>
-						<span className='w-4/5'>{prestasi}</span>
+				{achievements.map((achievement) => (
+					<div className='flex items-start justify-between' key={achievement}>
+						<span className='w-4/5'>{achievement}</span>
 						<Star size={20} className='text-secondary' />
 					</div>
 				))}

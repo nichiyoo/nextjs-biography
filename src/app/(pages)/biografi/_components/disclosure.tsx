@@ -6,7 +6,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Transition } from '@head
 
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/libs/util';
-import { listInovasi } from '@/libs/constant';
+import { inovations } from '@/libs/constant';
 
 interface DisclosureInovasiProps {
 	//
@@ -14,9 +14,9 @@ interface DisclosureInovasiProps {
 
 const DisclosureInovasi: React.FC<DisclosureInovasiProps> = ({ ...props }) => {
 	return (
-		<ul className='grid lg:grid-cols-2 gap-6'>
-			{listInovasi.map((item) => (
-				<li key={item.title}>
+		<ul className='grid gap-6'>
+			{inovations.map((inovation, index) => (
+				<li key={inovation.title}>
 					<Disclosure>
 						{({ open }) => (
 							<>
@@ -26,7 +26,7 @@ const DisclosureInovasi: React.FC<DisclosureInovasiProps> = ({ ...props }) => {
 										open && 'bg-primary text-white'
 									)}>
 									<div className='flex items-center justify-between'>
-										<span className='w-4/5 line-clamp-1'>{item.title}</span>
+										<span className='w-4/5 line-clamp-1'>{inovation.title}</span>
 										<ChevronDown
 											size={20}
 											className={cn(
@@ -40,13 +40,13 @@ const DisclosureInovasi: React.FC<DisclosureInovasiProps> = ({ ...props }) => {
 
 								<Transition
 									enter='duration-200 ease-out'
-									enterFrom='opacity-0 -translate-y-6'
+									enterFrom='opacity-0 -translate-y-3'
 									enterTo='opacity-100 translate-y-0'
 									leave='duration-200 ease-out'
 									leaveFrom='opacity-100 translate-y-0'
-									leaveTo='opacity-0 -translate-y-6'>
+									leaveTo='opacity-0 -translate-y-3'>
 									<DisclosurePanel>
-										<p className='px-6 py-2'>{item.description}</p>
+										<p className='px-6 py-2'>{inovation.description}</p>
 									</DisclosurePanel>
 								</Transition>
 							</>

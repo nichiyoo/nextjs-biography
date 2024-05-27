@@ -1,4 +1,4 @@
-export const penghargaan = [
+export const awards = [
 	{
 		title: 'Satya Kencana Karya Satya X (November 2011)',
 		description:
@@ -21,14 +21,14 @@ export const penghargaan = [
 	},
 ];
 
-export const prestasi = [
+export const achievements = [
 	'Juara Favorit III Lomba Video/Film Pendek Pengendalian PMK tahun 2023',
 	'Juara I Kota dengan Kinerja Pengendalian PMK Terbaik tahun 2023',
 	'Peringkat III Kota dengan Predikat Zero Reported Case PMK tahun 2024',
-	'Juara I Lomba Pembangunan Keluarga Tingkat Kota dan Provinsi Jawa Timur',
+	'PKB Teladan II tahun 2009',
 ];
 
-export const listInovasi = [
+export const inovations = [
 	{
 		title: 'Inovasi Bunting tanpa Perkawinan Menguntungkan (IB)',
 		description:
@@ -66,7 +66,7 @@ export const listInovasi = [
 	},
 ];
 
-export const jabatan = [
+export const positions = [
 	{
 		title: 'Kabid Peternakan',
 		golongan: 'Pembina/IVa',
@@ -105,7 +105,7 @@ export const jabatan = [
 	},
 ];
 
-export const informal = [
+export const trainings = [
 	{
 		id: 1,
 		title: 'Capacity Building',
@@ -192,22 +192,96 @@ export const informal = [
 	},
 ];
 
-export const navbar = [
+export const menus = [
 	{ href: '/', name: 'Home' },
 	{ href: '/biografi', name: 'Biografi' },
-	{ href: '/peternakan', name: 'Peternakan' },
+	{ href: '/peternakan', name: 'Bidang Peternakan' },
+	{ href: '/tim-asn-berakhlak', name: 'Tim ASN Berakhlak' },
 ];
 
-export const footer = [
+export const navigations = [
 	{
 		name: 'Halaman',
-		links: navbar,
+		menus: menus,
 	},
 	{
 		name: 'Kontak',
-		links: [
+		menus: [
 			{ href: 'mailto:drasitifatimah@gmail.com', name: 'drasitifatimah@gmail.com' },
 			{ href: 'tel:+628123456789', name: '+628123456789' },
 		],
+	},
+];
+
+export const members = [
+	{
+		name: 'Dra. Siti Fatimah',
+		position: 'Kepala Bidang Peternakan',
+		description:
+			'Dra. Hj. Siti Fatimah adalah seorang Aparatur Sipil Negara yang telah mengabdikan diri dalam berbagai kapasitas di lingkungan Pemerintah Kota Pasuruan. Sebelumnya, beliau telah menunjukkan dedikasinya sebagai Penyuluh KB hingga Kepala Sub Bagian di bagian Bina Mental Spritual Administrasi Kesra & Kemasyarakatan Setda Kota Pasuruan.',
+	},
+	{
+		name: 'Suryanto Widodo, S.P.',
+		position: 'Pengawas Mutu Pakan Ahli Muda',
+		description:
+			'Suryanto Widodo, S.P., adalah seorang profesional di bidang pengawasan mutu pakan di Dinas Pertanian dan Ketahanan Pangan Kota Pasuruan, yang telah menunjukkan dedikasi dan keahlian signifikan dalam bidangnya. Lahir di Jombang pada tanggal 21 Januari 1984, beliau saat ini menjabat sebagai Pengawas Mutu Pakan Ahli Muda, setelah menyelesaikan pendidikan S2 di Universitas Widyagama Malang dalam bidang Manajemen Sumber Daya Manusia.',
+	},
+	{
+		name: 'drh. Yusuf Eko Hari.P.',
+		position: 'Medik Veteriner Ahli Pertama',
+		description:
+			'drh. Yusuf Eko Hari Prastyo merupakan Medik Veteriner Ahli Pertama di Dinas Pertanian dan Ketahanan Pangan Kota Pasuruan. Beliau memegang peran penting dalam mengawal kesehatan hewan dan keamanan pangan di wilayahnya. Lahir pada tanggal 1 April 1993, drh. Yusuf telah menunjukkan dedikasinya dalam bidang kedokteran hewan dan memegang jabatan ini dengan integritas tinggi.',
+	},
+];
+export const principles = [
+	{
+		name: 'Berorientasi Pelayanan',
+		description:
+			'Memastikan seluruh ASN di Bidang Peternakan Kota Pasuruan memiliki komitmen kuat untuk memberikan pelayanan prima yang mengutamakan kepuasan masyarakat, sesuai dengan core value Berorientasi Pelayanan.',
+	},
+	{
+		name: 'Akuntabel',
+		description:
+			'Mengimplementasikan prinsip akuntabilitas di mana setiap ASN bertanggung jawab atas kepercayaan yang diberikan oleh masyarakat dan pemerintah, sehingga setiap keputusan dan tindakan dapat dipertanggungjawabkan secara moral dan hukum.',
+	},
+	{
+		name: 'Kompeten',
+		description:
+			'Mendorong ASN untuk terus belajar dan mengembangkan kapabilitas mereka sesuai dengan tuntutan zaman dan kebutuhan sektor peternakan, sehingga ASN menjadi lebih kompeten dalam menjalankan tugasnya.',
+	},
+	{
+		name: 'Harmonis',
+		description:
+			'Menumbuhkan lingkungan kerja yang harmonis di mana ASN saling peduli dan menghargai perbedaan, menciptakan kerja sama tim yang efektif dan efisien.',
+	},
+	{
+		name: 'Loyal',
+		description:
+			'Memperkuat loyalitas ASN terhadap negara dengan mengutamakan kepentingan bangsa dan negara di atas kepentingan pribadi atau golongan, sehingga ASN menjadi teladan dalam pelayanan publik.',
+	},
+	{
+		name: 'Adaptif',
+		description:
+			'Mengembangkan kemampuan ASN untuk terus berinovasi dan beradaptasi dengan perubahan, baik dalam teknologi maupun metodologi, untuk meningkatkan efisiensi dan efektivitas dalam sektor peternakan.',
+	},
+	{
+		name: 'Kolaboratif',
+		description:
+			'Membangun kerja sama yang sinergis antara ASN di Bidang Peternakan dengan stakeholder lain, baik di dalam maupun di luar sektor pertanian, untuk mendukung pencapaian tujuan pembangunan nasional.',
+	},
+];
+
+export const services = [
+	{
+		name: 'Vaksinasi PMK',
+		image: '/images/services/pmk.png',
+		description:
+			'Vaksinasi PMK adalah salah satu bentuk dari orientasi pelayanan terhadap masyarakat, khususnya peternak sapi dan kambing. Vaksinasi memberikan manfaat yang baik, namun terdapat beberapa peternak yang beranggapan bahwa vaksin memberikan dampak buruk sehingga peternak menolak ternaknya divaksin. Dengan kejadian ini, bidang peternakan terus berupaya memberikan komunikasi, informasi, dan edukasi terhadap peternak tentang vaksinasi.',
+	},
+	{
+		name: 'Inseminasi Buatan',
+		image: '/images/services/inseminasi.png',
+		description:
+			'Salah satu inovasi signifikan dalam program pengelolaan sumber daya genetik hewan, tumbuhan, dan mikroorganisme yang berada di bawah kewenangan kabupaten/kota adalah penggunaan teknik Inseminasi Buatan (IB). Teknik ini merupakan terobosan dalam bioteknologi reproduksi peternakan, di mana semen yang telah diproses dari ternak jantan secara hati-hati diinjeksikan ke dalam saluran alat kelamin betina menggunakan alat khusus yang dikenal sebagai "insemination gun". Inovasi ini tidak hanya meningkatkan efisiensi reproduksi tetapi juga memungkinkan peningkatan genetik ternak secara lebih cepat dan terkontrol.',
 	},
 ];

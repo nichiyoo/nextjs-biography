@@ -1,8 +1,9 @@
 import * as React from 'react';
 
-import { informal, jabatan } from '@/libs/constant';
+import { positions, trainings } from '@/libs/constant';
 
 import DisclosureInovasi from './_components/disclosure';
+import { cn } from '@/libs/util';
 
 interface PageProps {
 	//
@@ -24,17 +25,20 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 					</p>
 				</div>
 
-				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-					{jabatan.map((jabatan) => (
+				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 '>
+					{positions.map((position, idx) => (
 						<div
-							key={jabatan.title}
-							className='bg-zinc-100 hover:bg-primary hover:text-white rounded-lg p-8 group cursor-pointer transition-colors duration-200 ease-in-out'>
+							key={position.title}
+							className={cn(
+								'bg-zinc-100 hover:bg-primary hover:text-white rounded-lg p-8 cursor-pointer transition-colors duration-200 ease-in-out group',
+								idx === 0 && 'bg-primary [&>h3]:text-white [&_:is(span,p)]:text-white/60'
+							)}>
 							<div className='flex justify-between items-center mb-4'>
-								<span className='text-sm group-hover:text-white/60'>{jabatan.golongan}</span>
-								<span className='text-sm group-hover:text-white/60'>{jabatan.tahun}</span>
+								<span className='text-sm group-hover:text-white/60'>{position.golongan}</span>
+								<span className='text-sm group-hover:text-white/60'>{position.tahun}</span>
 							</div>
-							<h3 className='font-sans font-medium mb-2'>{jabatan.title}</h3>
-							<p className='text-sm group-hover:text-white/60'>{jabatan.instansi}</p>
+							<h3 className='font-sans font-medium mb-2'>{position.title}</h3>
+							<p className='text-sm group-hover:text-white/60'>{position.instansi}</p>
 						</div>
 					))}
 				</div>
@@ -43,8 +47,7 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 			<section className='py-20  bg-zinc-50'>
 				<div className='w-content'>
 					<div className='mb-8'>
-						<span className='section text-primary'>Biografi</span>
-						<h1 className='mb-4 text-3xl'> Inovasi berdasarkan Nilai ASN Berakhlak</h1>
+						<h2 className='mb-4 text-3xl'> Inovasi berdasarkan Nilai ASN Berakhlak</h2>
 						<p>
 							Berdasarkan data yang diberikan oleh Nilai ASN Berakhlak, Dra. Hj. Siti Fatimah membuat
 							inovasi berdasarkan kemajuan yang diberikan oleh Nilai ASN Berakhlak. Ini membuat Dra. Hj.
@@ -59,8 +62,7 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 
 			<section className='py-20 w-content'>
 				<div className='mb-8'>
-					<span className='section text-primary'>Biografi</span>
-					<h1 className='mb-4 text-3xl'> Riwayat Pendidikan Informal / Diklat</h1>
+					<h2 className='mb-4 text-3xl'> Riwayat Pendidikan Informal / Diklat</h2>
 					<p>
 						Berisi informasi tentang pendidikan informal dan diklat yang pernah dilakukan oleh Dra. Hj. Siti
 						Fatimah, terkait dengan bidang pelayanan publik dan pengembangan masyarakat. Ini mencakup
@@ -80,13 +82,13 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 							</tr>
 						</thead>
 						<tbody>
-							{informal.map((informal) => (
-								<tr key={informal.id} className='border-t border-zinc-200 [&>td]:px-4 [&>td]:py-2'>
-									<td className='text-left'>{informal.id}</td>
-									<td className='text-left'>{informal.title}</td>
-									<td className='text-left'>{informal.tempat}</td>
-									<td className='text-left'>{informal.tahun}</td>
-									<td className='text-left'>{informal.instansi}</td>
+							{trainings.map((training) => (
+								<tr key={training.id} className='border-t border-zinc-200 [&>td]:px-4 [&>td]:py-2'>
+									<td className='text-left'>{training.id}</td>
+									<td className='text-left'>{training.title}</td>
+									<td className='text-left'>{training.tempat}</td>
+									<td className='text-left'>{training.tahun}</td>
+									<td className='text-left'>{training.instansi}</td>
 								</tr>
 							))}
 						</tbody>
@@ -96,3 +98,22 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 		</>
 	);
 }
+
+export const metadata = {
+	title: 'Biografi',
+	description:
+		'Dra. Hj. Siti Fatimah adalah seorang ASN yang mempunyai pengalaman memimpin di berbagai seksi pemerintahan kota Pasuruan, Surabaya, Malang, dan Jember.',
+	openGraph: {
+		title: 'Biografi',
+		description:
+			'Dra. Hj. Siti Fatimah adalah seorang ASN yang mempunyai pengalaman memimpin di berbagai seksi pemerintahan kota Pasuruan, Surabaya, Malang, dan Jember.',
+		images: '/opengraph-image.png',
+	},
+	metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL as string),
+	alternates: {
+		canonical: '/biografi',
+	},
+	twitter: {
+		images: '/twitter-image.png',
+	},
+};

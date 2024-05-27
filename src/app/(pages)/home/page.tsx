@@ -15,7 +15,7 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 	return (
 		<>
 			<section className='py-20 w-content'>
-				<div className='grid items-center gap-8 lg:grid-cols-2'>
+				<div className='grid items-center gap-10 lg:grid-cols-2'>
 					<div className='order-last lg:order-first'>
 						<span className='section text-primary'>Kepala Bidang Peternakan</span>
 						<h1 className='mb-4 text-5xl'> Dra. Hj. Siti Fatimah</h1>
@@ -43,7 +43,7 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 							alt='Dra. Siti Fatimah'
 							width={500}
 							height={500}
-							className='w-full h-full'
+							className='w-full h-full max-w-[500px] mx-auto'
 						/>
 					</div>
 				</div>
@@ -51,18 +51,18 @@ export default async function Page({ ...props }: PageProps): Promise<React.JSX.E
 
 			<section className='py-20 bg-primary'>
 				<div className='text-white w-content'>
-					<div className='grid gap-8 lg:grid-cols-2'>
+					<div className='grid gap-8'>
 						<div>
 							<div className='w-10 h-10 bg-secondary rounded-full flex items-center justify-center mb-4'>
 								<HeartHandshake size={24} className='text-white' />
 							</div>
-
 							<h2 className='mb-4 text-xl'> Dedikasi Pelayanan</h2>
 							<p className='text-white/60'>
-								Sebagai Kepala Sub Bagian Bina Mental Spiritual Administrasi Kesra dan Kemasyarakatan,
-								Dra. Siti Fatimah telah berperan aktif dalam mengembangkan program-program untuk
-								meningkatkan kualitas hidup dan kesejahteraan masyarakat. Dedikasinya yang tinggi
-								tercermin dalam berbagai inisiatif pembangunan keluarga dan masyarakat.
+								Sebagai seorang ASN yang mempunyai pengalaman memimpin di berbagai seksi pemerintahan
+								kota Pasuruan, Dra. Siti Fatimah telah berperan aktif dalam mengembangkan
+								program-program untuk meningkatkan kualitas hidup dan kesejahteraan masyarakat.
+								Dedikasinya yang tinggi tercermin dalam berbagai inisiatif pembangunan keluarga dan
+								masyarakat.
 							</p>
 						</div>
 
